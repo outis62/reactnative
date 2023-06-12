@@ -1,0 +1,52 @@
+Résumé  séance1:
+
+Étape 1: Installation de JDK v8, SDK et de node js v12 
+
+ Étape 2 : configuration des variables environnementale
+   *Creer une variable JAVA_HOME avec la valeur 
+Étape 3 : téléchargements des éléments nécessaires pour le SDK
+
+Étape 4 : mise à jour du SDK
+Commande à exécuter sur cmd (mode admin) 
+- Pour accéder au répertoire android-sdk : cd C:\Users\AFISS\AppData\Android\android-sdk\tools\bin (à rechercher selon le chemin de votre ordinateur surtout)
+- Après être accéder au répertoire, exécuter la commande ci-après : sdkmanager --update
+- Après faire yes (Y) pour confirmer la mise à jour
+
+Étape 5 : vérification des différentes installations faites avec les commandes suivantes
+- Pour le JDK : javac -version ou bien java -version
+- Pour le node : node -v
+- Pour l'environnement JDK : echo %JAVA_HOME% 
+- Pour l'environnement SDK : echo %ANDROID_HOME% 
+
+ Étape 6 : téléchargements des paquages de react native 
+- Pour le faire exécuter la commande sur cmd ( en mode admin) : npm install -g react-native-cli
+
+Étape 7: création du dossier dans un répertoire approprié puis exécution de react native pour la création du projet 
+- Créer d'abord un dossier dans un répertoire de votre choix. Y accéder en cmd (mode admin)
+- Puis exécuter la commande pour créer un projet : npx react-native init projet1 --version 0.66.0
+
+ Étape 8 : installation de Visual code et ouverture du projet dans l'environnement de développement
+- lien de téléchargement de Visual studio code : https://code.visualstudio.com/
+- Enfin ouvrir le projet crée dans votre dossier choisi
+
+KARRAY GROUP a le plaisir de vous communiquer ci-dessous le lien de l’enregistrement Vidéo  de la 1ére séance de 03-06-2023 de la formation : « Devenir développeur Mobile : React Native  »
+ 
+ Lien de téléchargement de la vidéo : https://us06web.zoom.us/rec/share/wjx614O72g7UZt_2PE79UTS8G1YvI39fZuBMp84Gt_xnZXIdCRNu20L3wBo_BgyT.hg_F89Do6tQZIGgf
+Code secret: seance.1
+ 
+Au plaisir de vous servir
+
+
+En ajout : La commande "npx create-expo-app" est utilisée pour créer une application mobile en utilisant Expo, un framework qui facilite le développement d'applications mobiles multiplateformes en utilisant JavaScript et React Native. L'option "-t" permet de spécifier un modèle ou un template à utiliser lors de la création de l'application.
+
+La commande "npx react-native init" est utilisée pour créer une application mobile en utilisant React Native, un framework JavaScript pour le développement d'applications mobiles. L'option "--version" permet de spécifier une version spécifique de React Native à utiliser lors de la création de l'application. Dans cet exemple, la version 0.66.0 de React Native serait utilisée.
+Expo simplifie le processus de développement d'applications mobiles, mais peut avoir certaines limitations, tandis que React Native offre plus de flexibilité, mais peut nécessiter davantage de configuration et de gestion. Le choix entre les deux dépendra des besoins spécifiques de votre projet et de votre familiarité avec les frameworks.
+
+
+Voici les Liens pour télécharger USB driver   :
+
+Tecno : https://androidmtk.com/download-tecno-usb-drivers
+Samsung: https://developer.samsung.com/android-usb-driver
+Redmi:  https://androidmtk.com/download-xiaomi-usb-drivers
+Huawei: https://huaweiflash.com/huawei-usb-drivers/
+Infinix : https://androidmtk.com/infinix-usb-driver
