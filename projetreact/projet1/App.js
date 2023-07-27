@@ -1,48 +1,61 @@
-import React, { Component } from 'react';
+import React, {Component, useState} from 'react';
 
-import { Text, TextInput, View, TouchableHighlight, Image, } from 'react-native';
-import Style1 from "./composant/style";
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
+import Login1 from './composant/login'
+import Ajout from './composant/ajout'
+import Liste from './composant/liste'
+import Accueil from './composant/home'
 
 export default class App extends Component {
   render() {
     return (
-      <View
-        style={Style1.viewGlobal}>
-
-        <Text style={Style1.simplon} >Simplon.co/BF</Text>
-        {/* <Image  
-        style={{width:120,height:120, borderRadius:20,}}
-        source={{uri:'https://upload.wikimedia.org/wikipedia/commons/6/60/%C3%89tudiant.jpg'}}
-        />   */}
-        <Image
-          style={Style1.img1}
-          source={require('./image/logo.png')}
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName={'Login1'}
+       screenOptions={{
+        headerStyle: {
+          backgroundColor: 'blue',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+        >
+        <Stack.Screen name='Ajout' component={Ajout} 
+         options={{
+          title: 'Ajouter participant'
+        }}
         />
-        <TextInput
-          style={Style1.textinputuser}
-          placeholder={'Utilisateur'}
-          value={''}
-        />
-        <TextInput
-          style={Style1.textinputmdp}
-          placeholder={'Mot de passe'}
-          value={''}
-          onSecureTextEntry={true}
-        />
-        <Text style={Style1.mdpoublier}>Mot de passe oublier?</Text>
-        <TouchableHighlight
-          style={Style1.butoonauthent}>
-          <Text style={Style1.textLogin}>S'authentifier</Text>
-        </TouchableHighlight>
+          <Stack.Screen name='Login1' component={Login1} 
+          options={{
+            title: 'Authentification',
+            headerBackTitleVisible:false
 
-        <TouchableHighlight
-          style={Style1.butooninscrit}>
-          <Text style={Style1.textinscrit}>
-            S'inscrire
-          </Text>
-        </TouchableHighlight>
-
-      </View>
+            
+          }}
+          />
+          <Stack.Screen name='Liste' component={Liste} 
+          options={{
+            title: 'Liste des participants',
+            headerBackTitleVisible:false
+          }}
+          />
+            <Stack.Screen name='Accueil' component={Accueil} 
+          options={{
+            title: 'Home',
+            //desactive la visibilite du bouton pour le retour au niveau de header
+            headerBackVisible: false,
+            headerBackTitleVisible:false
+          
+          }}
+          />
+          
+        </Stack.Navigator>
+      </NavigationContainer>
     );
   }
 }
